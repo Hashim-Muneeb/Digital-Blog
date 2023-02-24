@@ -1,0 +1,36 @@
+<%- include('partials/header'); -%>
+
+    <h1>Home</h1>
+    <p>
+        <%= content1 %>
+            Welcome to my blog!
+            <br><br>
+            This is a place where I share my thoughts, ideas, and experiences with the world.
+            Here, you'll find a wide range of topics that I'm passionate about, including technology, travel, lifestyle,
+            and more. Whether you're looking for advice on the latest gadgets, tips for planning your next adventure, or
+            just some inspiration for living your best life, you've come to the right place.
+            I believe that the best way to learn is by sharing our experiences and ideas with others. That's why I
+            created this blog - to connect with like-minded individuals and share my knowledge and expertise.
+            As you explore my blog, you'll find a variety of articles, ranging from informative how-to guides to
+            personal stories and reflections. My goal is to create content that is not only engaging and informative but
+            also thought-provoking and inspiring.
+            <br><br>
+            So, whether you're a fellow blogger, a curious reader, or just someone looking for some new ideas and
+            perspectives, I invite you to join me on this journey of discovery and exploration. Together, let's discover
+            new ideas, share our experiences, and make the most of this incredible journey we call life.
+    </p>
+
+
+
+    <% posts.forEach(function(post){ %>
+        <h1>
+            <%= post.title %>
+        </h1>
+        <p>
+            <%= post.body.substring(0, 100) + "..." %>
+                <a href="/posts/<%= post.title%>">Read More</a>
+        </p>
+
+    <% }) %>
+
+<%- include('partials/footer'); -%>
